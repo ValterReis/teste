@@ -1,5 +1,104 @@
-Versão 1
+Criando um respositório no github e depois exportar para o PC:
 
-Arquivo editado pelo github!
+1 - Acesse o github;
+2 - Click em repositórios;
+3 - Click em new (Botão verde que fica no canto superior direito);
+4 - Informe o nome do seu novo respositório no campo "Repository name";
+5 - Escolha entre as opções "público ou privado";
+6 - Selecione a opção "Add a README file" (Ele mostra as específicações do projeto);
+7 - Click em "Creating repository";
+8 - Irá criar o repositório;
 
-Versão 2
+Após o repositório criado, entre nele:
+
+1 - Click no botão "Code", que fica no canto superior direito;
+2 - Copie o link (Ele é o endereço do nosso repositório remoto);
+3 - Crie uma pasta no seu PC;
+4 - Entre na pasta e click com o botão direito;
+5 - Escolha a opção "Git Bash Here", ele é o terminal do git;
+6 - Irá abrir o terminal exatamente na pasta que clicamos com o botão direito;
+
+Utilizando o terminal:
+
+1 - Vamos colar o endereço do nosso repositório remoto;
+2 - Lembrando que ele é o link que copiamos no botão code na aba repositório do nosso github;
+3 - Digite os comandos;
+
+Comandos 1:
+
+1 - git clone (aperte o botão insert no seu teclado e ele irá colar o link copiado);
+2 - Será clonado a pasta que criamos no github e uma cópia será enviada para dentro da pasta escolhida no seu PC;
+3 - Feche esse terminal;
+
+Entrando na pasta criada no PC:
+
+1 - Foi criado o arquivo .git (Isso quer dizer que essa pasta é um respositório git);
+2 - Foi criado o README;
+3 - Dentro da pasta, click com o botão direito;
+4 - Escolha a opção "Git Bash Here";
+5 - No git bash, irá mostrar que estamos no "main" que é a branch princípal do seu repositório;
+6 - Crie um arquivo, só para teste, exemplo, (arquivo 01.txt);
+7 - Insira um texto ou uma frase nesse arquivo, exemplo, "Primeira versão";
+8 - Volte para o terminal git bash que abrimos antes de criar o arquivo;
+
+Comandos 2:
+
+1 - git status (Ele irá mostrar como está nosso respositório);
+2 - Irá informar que tem um up date na branch (branch is up date with 'origin/main');
+3 - E também irá aparecer a informação que o, arquivo 01.txt, foi incluido (to include in what will be commited);
+4 - E precisamos adicionar esse arquivo para fazer o commit (use "git add <file>...");
+
+Conceitos das área que existem dentro do git:
+
+1 - Diretório de trabalho, é a pasta onde estão os arquivos que podemos adicionar, modificar ou excluir;
+2 - Após o comando git add os arquivos irão para a área de preparação onde foram adicionado e preparados para serem versionados;
+3 - Depois efatuamos o git commit que serão salvos em nosso repositório;
+
+No git bash, vamos adicinar nosso arquivo01.txt na área de preparação, utilizando o git add. lembrando que existem duas formas;
+
+1 - Primeira forma, (git add arquivo 01.txt), aqui você tem que informar o nome do arquivo que será enviado para a área de preparação;
+2 - Segunda forma, (git add .), esse comando adiciona todos os arquivos que estão pendentes no diretório de trabalho, lembre de dar espaço após o add;
+3 - Como após o enter não aparece nenhuma informação se o arquivo foi enviado, vamos utilizar o git status para visualizar;
+4 - Irá informar que o arquivo está na área de preparação, Changes to be commited: (Use "git restore --staged <file>..." to unstage) new file: arquivo 01.txt;
+5 - Agora podemos fazer um commit do arquivo;
+6 - Agora vamos enviar o arquivo para área de versionamento:
+
+Comandos 3:
+
+1 - git commit -m "Enviado o passo a passo de usar o git e github via terminal" (O menos m é para iserirmos uma mensagem);
+2 - O commit pega todos os arquivos que estão na área de preparação;
+3 - Após o enter, ele irá informar que o arquivo foi inserido no main - 1 file changed, 1 insertion(+);
+4 - git log, mostra todos os commits que foram feitos e também o código do commit, onde foi feito (main), autor, data e hora e mensagem "Enviado o passo...";
+5 - No histórico, do git log, irá aparecer o "Initial commit" que é gerando assim que criamos o respositório com o README;
+
+Comando 4:
+
+1 - Vamos enviar os arquivos para o github;
+2 - git log para visualizar os arquivos que estão na área de preparação;
+3 - git push origin main (origin é para informar para qual branch o arquivo será enviado);
+4 - Será feito um upload dos arquivos;
+5 - Vá ao github e atualize, e pronto nosso arquivos estará lá;
+
+Comando 5:
+
+1 - Agora vamos enviar alterações do github para o git desktop;
+2 - Vamos editar o arquivo 01.txt e inserir uma frase;
+3 - Insira um comentário no campo "Commit changes". Lembrando que não é obrigatório, pois o git insere um caso não queira inserir;
+4 - Click no botão verde "Commit changes";
+5 - Ele irá comitar no github, porém, ainda não foi enviado para o git desktop;
+
+Comando 6:
+
+1 - Vamos fazer um download do arquivo alterado para nosso repositório local, o git desktop;
+2 - git pull origin main;
+
+Todos os comandos git e github via terminal até o momentos o git bash:
+
+1 - git clone
+2 - git satus - informa o status do nosso repositório
+3 - git add arquivo 01.txt - insere o aquivo específico
+4 - git add . - insere todos os arquivos que estão na área de preparação
+5 - git commit -m "Primeiro arquivo comitado" - lembrando que o -m é exclusivo para inserir mensagens do commit que será enviado
+6 - git log - mostra todos os commits que foram feitos
+7 - git push origin main - informando para onde, qual branch, o arquivo será enviado;
+8 - git pull origin main - ele traz a alteração do arquivo do github para o git desktop;
